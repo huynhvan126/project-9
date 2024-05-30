@@ -43,6 +43,6 @@ class LineSegment:
         slope2 = other_line.slope()
         if slope1 is None and slope2 is None:
             return True
-        if slope1 is None or slope2 is None
+        if slope1 is None or slope2 is None:
             return False
         return abs(slope1-slope2) < 0.000001
