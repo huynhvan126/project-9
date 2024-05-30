@@ -33,7 +33,7 @@ class LineSegment:
         y1 = self._endpoint_1().get_y_coord()
         x2 = self._endpoint_2().get_x_coord()
         y2 = self._endpoint_2().get_y_coord()
-        if abs (x2 - x1) < 0.000001
+        if abs (x2 - x1) < 0.000001:
             return float('int')
         else:
             return (y2 - y1) / (x2 - x1)
