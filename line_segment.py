@@ -29,10 +29,10 @@ class LineSegment:
     def length(self):
         return self._endpoint_1.distance_to(self._endpoint_2)
     def slope(self):
-        x1 = self._endpoint_1().get_x_coord()
-        y1 = self._endpoint_1().get_y_coord()
-        x2 = self._endpoint_2().get_x_coord()
-        y2 = self._endpoint_2().get_y_coord()
+        x1 = self._endpoint_1.get_x_coord()
+        y1 = self._endpoint_1.get_y_coord()
+        x2 = self._endpoint_2.get_x_coord()
+        y2 = self._endpoint_2.get_y_coord()
         if x1 == x2 and y1 == y2:
             return None
         if abs (x2 - x1) < 0.000001:
