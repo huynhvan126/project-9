@@ -35,15 +35,14 @@ class LineSegment:
         y2 = self._endpoint_2.get_y_coord()
         if x1 == x2 and y1 == y2:
             return None
-        if abs (x2 - x1) < 0.000001:
-            return float('int')
         else:
-            slope_value = (y2 - y1) / (x2 - x1)
-            return slope_value 
+            return None
+        return (y2 - y1) / (x2 - x1)
     def is_parallel_to(self, other_line):
         slope1 = self.slope()
         slope2 = other_line.slope()
-        if slope1 is None or slope2 is None or abs(slope1) == float('int') or abs(slope2) == float('int'):
+        if slope1 is None and slope2 is None:
+            return True
+        if slope1 is None or slope2 is None
             return False
-        else:
-            return abs(slope1-slope2) < 0.000001
+        return abs(slope1-slope2) < 0.000001
